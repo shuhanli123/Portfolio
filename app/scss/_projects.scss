@@ -1,0 +1,90 @@
+.projects {
+
+  &__wrapper {
+    position: relative;
+    padding-right: 1.9375em;
+    padding-left: 1.9375rem;
+  }
+
+  &__text {
+    position: relative;
+    
+    @include breakpoint-down(large) {
+      text-align: center;
+    }
+  }
+
+  &__title {
+    padding: 0;
+    margin: 0;
+    margin-block-end: 0;
+  }
+
+  &__image {
+    width: 550px;
+
+    @include breakpoint-down(large) {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 95%;
+    }
+
+    @include breakpoint-up(large) {
+      width: 100%;
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    @include breakpoint-up(large) {
+      gap: 60px;
+    }
+  }
+
+  &__item {
+    grid-column: 1 / span 2;
+
+    @include breakpoint-down(medium) {
+      grid-column: span 1;
+    }
+
+    @include breakpoint-up(large) {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(4, auto);
+      grid-column: span 1;
+    }
+  }
+
+  &__tags {
+    font-size: 0.875rem;
+    margin-bottom: 0.7rem;
+
+    :not(:last-child) {
+      margin-right: 1rem;
+    }
+  }
+
+  &__links {
+    margin-bottom: 2.5rem;
+
+    a {
+      color: $white;
+      text-decoration: none;
+      transition: all 200ms ease-in-out;
+      font-size: 1rem;
+    }
+
+    a:hover {
+      color: $green;
+      text-shadow: 0 0 1.067rem $green;
+    }
+
+    :not(:last-child) {
+      margin-right: 1rem;
+    }
+  }
+}

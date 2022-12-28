@@ -1,0 +1,147 @@
+.contact {
+
+  &__wrapper {
+    position: relative;
+    padding-right: 1.9375em;
+    padding-left: 1.9375rem;
+
+    @include breakpoint-up(large) {
+      text-align: left;
+      grid-template-columns: repeat(2, 27.8rem);
+    }
+  }
+
+  &__container {
+    display: flex;
+    background: $black;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+  }
+
+  &__control {
+    color: $white;
+  }
+
+  &__text {
+    position: relative;
+
+    @include breakpoint-down(large) {
+      text-align: center;
+    }
+
+  }
+
+  &__button {
+    cursor: pointer;
+    position: relative;
+    font-family: "Roboto Mono", monospace;
+    font-size: $xsmall;
+    text-decoration: none;
+    background-color: $black;
+    border: $green 4px solid;
+    padding: 0.25em 1em;
+    border-radius: 0.25em;
+    box-shadow: inset 0 0 0.5em 0 $green, 0 0 0.5em $green;
+    color: $green;
+    width: 100px;
+    text-align: center;
+    margin-top: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &__button::before {
+    pointer-events: none;
+    content: "";
+    position: absolute;
+    background: $green;
+    top: 150%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: perspective(5em) rotateX(40deg) scale(1, 0.35);
+    filter: blur(2.5em);
+    opacity: 0.7;
+  }
+  
+  &__button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-shadow: inset 0 0 0.5em 0 $green, 0 0 2em $green;
+    opacity: 0;
+    transition: opacity 70ms linear;
+  }
+  
+  &__button:hover::before,
+  &__button:focus::before {
+    opacity: 1;
+  }
+  
+  &__button:hover::after,
+  &__button:focus::after {
+    opacity: 1;
+  }
+  
+  &__button:hover,
+  &__button:focus {
+    //background: $green;
+    opacity: 0.8;
+    color: $white;
+  }
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  background: none;
+  padding: 2vw 4vw;
+  min-width: 100%;
+  max-width: 37.5rem;
+  margin-top: 0;
+
+  @include breakpoint-up(large) {
+    min-width: 75%;
+  }
+}
+
+form input, form textarea {
+  border: none;
+  border-bottom: 1px solid $white !important;
+  box-shadow: none !important;
+  padding-inline: 24px;
+  padding-block: 1rem;
+  margin-block-end: 1rem;
+  text-shadow: none !important;
+  line-height: 1.625;
+  background: transparent;
+  font-family: "Poppins", serif;
+  outline: none;
+  color: $white !important;
+  width: 100%;
+}
+
+form input::placeholder,
+form textarea::placeholder {
+  color: $lightGray;
+  opacity: 0.5;
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+
+form input:focus-visible,
+form textarea:focus-visible {
+  border-bottom-color: $green !important;
+  box-shadow: 0px 15px 10px -15px $green !important;  
+}
+
+form input:invalid,
+form textarea:invalid {
+  border-bottom-color: $pink !important;
+  box-shadow: 0px 15px 10px -15px $pink !important;  
+}

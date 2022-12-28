@@ -1,0 +1,71 @@
+.about {
+
+  &__wrapper {
+    position: relative;
+    padding-right: 1.9375em;
+    padding-left: 1.9375rem;
+  }
+
+  &__image {
+    position: relative;
+    float: right;
+    padding: 1.25rem;
+
+    @include breakpoint-up(large) {
+      width: 25rem;
+    }
+
+    @include breakpoint-down(medium) {
+      width: 21.875rem;
+    }
+
+    @include breakpoint-down(small) {
+      padding: 2rem;
+      left: 50%;
+      translate: -50%;
+      margin: auto;
+    }
+  }
+
+  &__text {
+    position: relative;
+    padding-bottom: 0;
+
+    @include breakpoint-down(large) {
+      text-align: center;
+      float: left;
+    }
+  }
+
+  &__headline {
+    @include breakpoint-down(large) {
+      margin-bottom: 0;
+    }
+  }
+
+}
+
+.activities {
+  color: $white;
+
+  &__button {
+    cursor: pointer;
+    background: none;
+    color: $green;
+    text-shadow: 0 0 1rem $green;
+    font-size: $body;
+    font-family: "Poppins";
+    border: 3px solid $green;
+    box-shadow: inset 0 0 1em 0 $green, 0 0 1em $green;
+    border-radius: 50px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    transition: all 200ms ease-in-out;
+  }
+
+  &__button:hover {
+    box-shadow: inset 0 0 1.5em 0 $pink, 0 0 1.5em $pink;
+  }
+}

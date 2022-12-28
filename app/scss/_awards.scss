@@ -1,0 +1,44 @@
+.awards {
+
+  &__wrapper {
+    position: relative;
+    padding-right: 1.9375em;
+    padding-left: 1.9375rem;
+  }
+
+  &__headline {
+    position: relative;
+
+    @include breakpoint-down(large) {
+      text-align: center;
+    }
+  }
+
+  &__img {
+    @include breakpoint-down(large) {
+      width: 350px;
+      align-items: center;
+    }
+  }
+
+  &__p {
+    text-align: center;
+    align-items: center;
+  }
+
+  &__grid {
+
+  }
+
+  &__item {
+
+  }
+
+  &__tags {
+
+  }
+
+  &__links {
+
+  }
+}

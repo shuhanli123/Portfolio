@@ -1,0 +1,57 @@
+.hero {
+
+  &__image {
+    position: absolute;
+    padding: 1.25rem;
+    justify-content: right;
+    align-items: right;
+
+    @include breakpoint-up(large) {
+      width: 21.875rem;
+    }
+
+    @include breakpoint-down(medium) {
+      width: 21.875rem;
+    }
+
+    @include breakpoint-down(small) {
+      width: 250px;
+      left: 50%;
+      translate: -50%;
+    }
+  }
+
+  &__wrapper {
+    position: relative;
+    padding-right: 1.25rem;
+    padding-left: 1.25rem;
+  }
+
+  &__text {
+    position: relative;
+    text-align: center;
+    top: 375px;
+  }
+
+  &__headline {
+    color: $white;
+  }
+
+  &__description {
+    color: $white;
+  }
+
+  &__contact {
+    position: absolute;
+    font-family: "Roboto Mono", monospace;
+    margin-bottom: 70rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+}
+
+#name {
+  color: $green;
+  text-shadow: 0 0 1rem $green;
+}
