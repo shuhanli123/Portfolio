@@ -16,17 +16,17 @@
     }
 
     @include breakpoint-down(medium) {
+      position: absolute;
       width: 21.875rem;
       margin: auto;
-      float: center;
     }
 
     @include breakpoint-down(small) {
+      position: absolute;
       padding: 2rem;
       left: 50%;
       translate: -50%;
       margin: auto;
-      float: center;
     }
   }
 
