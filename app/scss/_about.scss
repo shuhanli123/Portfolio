@@ -17,6 +17,8 @@
 
     @include breakpoint-down(medium) {
       width: 21.875rem;
+      margin: auto;
+      float: center;
     }
 
     @include breakpoint-down(small) {
@@ -24,6 +26,7 @@
       left: 50%;
       translate: -50%;
       margin: auto;
+      float: center;
     }
   }
 
