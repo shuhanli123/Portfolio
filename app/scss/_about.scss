@@ -22,10 +22,10 @@
     }
 
     @include breakpoint-down(small) {
-      //position: absolute;
+      position: absolute;
       padding: 2rem;
       left: 50%;
-      translate: -50%;
+      transform: translateX(-50%);
       margin: auto;
     }
   }
