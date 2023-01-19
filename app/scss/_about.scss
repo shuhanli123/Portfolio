@@ -18,7 +18,9 @@
     @include breakpoint-down(medium) {
       position: absolute;
       width: 21.875rem;
-      margin: auto;
+      //margin: auto;
+      left: 50%;
+      transform: translateX(-50%);
     }
 
     @include breakpoint-down(small) {
@@ -26,7 +28,7 @@
       padding: 2rem;
       left: 50%;
       transform: translateX(-50%);
-      margin: auto;
+      //margin: auto;
     }
   }
 
